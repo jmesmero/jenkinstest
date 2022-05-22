@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   jenkins:
     build: .
@@ -15,6 +15,13 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     env_file:
       - .env
+  remote_host:
+    container_name: remote-host
+    image: remote-host
+    build:
+      context: Centos
+    networks:
+      - jenkins
 
 networks:
   jenkins:
