@@ -3,5 +3,5 @@ test/*
 .env
 trash/*
 apps/*
-#Centos/*
+Centos/*
 ssh/*
