@@ -22,3 +22,5 @@ nodejs:latest
 docker:latest
 docker-build-publish:latest
 publish-over-ssh:latest
+ansible:latest
+ansicolor:latest

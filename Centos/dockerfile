@@ -7,7 +7,7 @@ RUN useradd jenkins && \
     mkdir /home/jenkins/.ssh && \
     chmod 700 /home/jenkins/.ssh
 
-COPY ssh/remote-ki.pub /home/jenkins/.ssh/authorized_keys
+COPY $PWD/ssh/remote-ki.pub /home/jenkins/.ssh/authorized_keys
 
 RUN chown jenkins:jenkins   -R /home/jenkins && \
     chmod 400 /home/jenkins/.ssh/authorized_keys
