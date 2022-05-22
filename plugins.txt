@@ -21,3 +21,4 @@ ws-cleanup:latest
 nodejs:latest
 docker:latest
 docker-build-publish:latest
+publish-over-ssh:latest

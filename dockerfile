@@ -38,7 +38,8 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 #id_rsa.pub file will be saved at /root/.ssh/
-RUN ssh-keygen -f /root/.ssh/id_rsa -t rsa -N ''
+#RUN ssh-keygen -f /root/.ssh/id_rsa -t rsa -N ''
+#COPY ssh/id_rsa  /var/jenkins_home/.ssh/.
 RUN chown -R jenkins:jenkins /var/jenkins_home
 #VOLUME /var/jenkins_home
 
